@@ -136,6 +136,7 @@ export const createRange = /* #__PURE__ */ factory(name, dependencies, ({ typed,
    */
   function _rangeEx (start, end, step) {
     const array = []
+    if(end>999999){return array;}
     let x = start
     if (step > 0) {
       while (smaller(x, end)) {
@@ -162,6 +163,7 @@ export const createRange = /* #__PURE__ */ factory(name, dependencies, ({ typed,
    */
   function _rangeInc (start, end, step) {
     const array = []
+    if(end>999999){return array;}
     let x = start
     if (step > 0) {
       while (smallerEq(x, end)) {
@@ -189,6 +191,7 @@ export const createRange = /* #__PURE__ */ factory(name, dependencies, ({ typed,
   function _bigRangeEx (start, end, step) {
     const zero = bignumber(0)
     const array = []
+    if(end>999999){return array;}
     let x = start
     if (step.gt(zero)) {
       while (smaller(x, end)) {
@@ -216,6 +219,7 @@ export const createRange = /* #__PURE__ */ factory(name, dependencies, ({ typed,
   function _bigRangeInc (start, end, step) {
     const zero = bignumber(0)
     const array = []
+    if(end>999999){return array;}
     let x = start
     if (step.gt(zero)) {
       while (smallerEq(x, end)) {
